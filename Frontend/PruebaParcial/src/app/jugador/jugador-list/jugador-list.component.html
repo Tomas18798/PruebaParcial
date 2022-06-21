@@ -1,0 +1,25 @@
+<hr>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Posicio</th>
+                <th>Dorsal</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let jugador of jugadores">
+                <td>{{jugador.id}}</td>
+                <td>{{jugador.nombre}}</td>
+                <td>{{jugador.posicion}}</td>
+                <td>{{jugador.dorsal}}</td>
+                <td><button class="btn btn-primary" (click)="edit(jugador.id)">Editar</button><label for=""> - </label>
+                    <button class="btn btn-danger" (click)="delete(jugador.id)">Borrar</button></td>
+            </tr>
+        </tbody>
+    </table><br>
+    <button class="btn btn-success" (click)="create()">Agregar nuevo jugador</button>
+</div><br><hr>

@@ -1,0 +1,2 @@
+<app-header [title]="'Lista de jugadores'"></app-header>
+<app-jugador-list [jugadores]="jugadores" (createEvent)="create()" (deleteEvent)="delete($event)" (editEvent)="edit($event)"></app-jugador-list>
